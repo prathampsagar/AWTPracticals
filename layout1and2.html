@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            padding: 2px;
+        }
+        
+        #logo {
+            width: 100%;
+            background-color: grey;
+            height: 6%;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        #close {
+            width: 97.5%;
+            background-color: grey;
+            height: 6%;
+            margin-top: 70px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        img {
+            border-radius: 20px;
+            margin: 10px;
+        }
+        
+        #header {
+            width: 99.8%;
+            background-color: grey;
+            height: 6%;
+            margin-bottom: 2px;
+            padding: 2px;
+            border-radius: 10px;
+        }
+        
+        #search {
+            width: 97%;
+            background-color: grey;
+            height: 6%;
+            margin-bottom: 2px;
+            padding: 22px;
+            border-radius: 10px;
+        }
+        
+        #unique {
+            padding: 14px;
+            width: 50%;
+            height: 20%;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+        
+        #submit {
+            padding: 14px;
+            margin-left: 20px;
+            width: 12%;
+            height: 20%;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, black, black, gray, white, grey, black, black);
+        }
+        
+        h1 {
+            color: orange;
+            font-size: 90px;
+            text-shadow: 2px 2px orangered;
+        }
+        
+        #onetwo {
+            width: 98.9%;
+            height: 1000px;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        #one,
+        #two {
+            float: left;
+            border-radius: 20px;
+            padding: 100px 2px;
+            vertical-align: baseline;
+            text-align: center;
+            height: 85%;
+        }
+        
+        #one {
+            width: 22%;
+            margin-right: 2px;
+            background-color: orange;
+        }
+        
+        #two {
+            width: 69.5%;
+            float: right;
+            background-color: orange;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="logo">
+            <center>
+                <img src="logo.PNG" alt="LOGO" width="90px" height="70px">
+            </center>
+        </div>
+        <div id="header">
+            <h1>
+                <center><mark>Search Services</mark></center>
+            </h1>
+        </div>
+        <div id="search">
+            <center>
+                <input type="text" id="unique" placeholder="Search Here......">
+                <input type="submit" id="submit">
+            </center>
+        </div>
+        <div id="onetwo">
+            <div id="one">Side Button</div>
+            <div id="two"><img src="table1.png"><img src="table1.png"><img src="table1.png"><img src="table1.png"><img src="table1.png"></div>
+        </div>
+        <div id="close">Footer</div>
+    </div>
+</body>
+
+</html>
