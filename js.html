@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" src="external.js"></script>
+    <script type="text/javascript">
+        function dataset12(){
+            alert("Enter Name : ");
+        }
+        function dataset34(){
+            if(confirm("Name Is Correct : "))
+            {
+                alert("Data Saved.");
+            }
+            else
+            {
+                alert("Data Clean.");
+            }
+        }
+        function dataset56(){
+            if(prompt("Enter Name : ")=="ad" && prompt("Enter Password : ")=="rt")
+            {
+                alert("Successfully Login..");
+            }
+            else
+            {
+                alert("Successfully Exit..");
+            }
+        }
+    </script>
+</head>
+<body style="background-color:yellow;">
+    <button onclick='alert("do not click here again...")'>alert()</button>
+    <button onclick='confirm("this is an AWT Practical..")'>confirm()</button>
+    <button onclick='prompt("enter name : ")'>prompt()</button>
+    <hr>
+    <input type="button" value="dataset1" onclick='dataset12()'>
+    <input type="button" value="dataset2" onclick='dataset34()'>
+    <input type="button" value="dataset3" onclick='dataset56()'>
+    <hr>
+    <input type="button" value="function1" onclick='func1()'>
+    <input type="button" value="function2" onclick='func2()'>
+    <input type="button" value="function3" onclick='func3()'>
+    <hr>
+    <input type="button" value="swapping" onclick='foreg()'>
+    <input type="button" value="normal" onclick='normal1()'>
+    <div id="unique" style="background-color:grey;width:700px;height:300px;" onclick='alert("Div Tag")'>Hello World!!</div>
+    <input type="color" id="cp1" onchange="charges1()"><label>BackGround</label>
+    <br>
+    <input type="color" id="cp2" onchange="charges2()"><label>ForeGround</label>
+    <br>
+    <input type="button" value="background" onclick='useprompt1()'>
+    <input type="button" value="foreground" onclick='useprompt2()'>
+</body>
+</html>
