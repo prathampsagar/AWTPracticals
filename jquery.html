@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#unique").hide();
+                $("#hide").prop('disabled',true);
+                $("#show").prop('disabled',false);
+            });
+        });
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#unique").show();
+                $("#show").prop('disabled',true);
+                $("#hide").prop('disabled',false);
+            });
+        });
+        $(document).ready(function(){
+            $("#both").click(function(){
+                $("#unique").toggle(0,function(){
+                    $("#hide").prop('disabled',false);
+                    $("#show").prop('disabled',false);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="unique" style="width:300px; height:300px; background-color:red; font-size:24px; border:2px dashed yellow; color:yellow; padding:10px; text-shadow:4px 4px black;">Div Tag</div>
+    <hr>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <hr>
+    <button id="both">Toggle To Hide/Show</button>
+</body>
+</html>
