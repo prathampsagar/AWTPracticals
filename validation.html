@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            form{
+                margin-top:30px;
+                width:400px;
+                background-color:aquamarine;
+                border-radius:20px;
+            }
+            fieldset{
+                width:300px;
+                border-radius:20px;
+                padding:20px;
+            }
+            input[type=text]{
+                border:none;
+                border-bottom:2px solid darkblue;
+                border-radius:4px;
+                padding:10px 60px;
+                float:right;
+                text-align:center;
+                background-color:#CAF1DE;
+            }
+            label{
+                float:left;
+                padding:10px;
+                margin:10px;
+                font-size:22px;
+            }
+            input[type=password]{
+                border:none;
+                border-bottom:2px solid darkblue;
+                border-radius:4px;
+                padding:10px 60px;
+                float:right;
+                text-align:center;
+                background-color:#CAF1DE;
+            }
+            input[type=submit]{
+                background-color:lavender;
+                border-radius:10px;
+                padding:10px 20px;
+                margin:20px;
+                font-size:24px;
+                color:purple;
+                border:none;
+            }
+            legend{
+                text-align:center;
+                font-size:30px;
+            }
+            #pg2{
+                display:none;
+            }
+            button{
+                border:none;
+                margin-left:0px;
+                margin-right:0px;
+                padding:10px 25px;
+                background-color:beige;
+                font-size:20px;
+                color:brown;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $("#log").click(function(){
+                $("#pg1").show();
+                $("#pg2").hide();
+                $("#log").prop('disabled',true);
+                $("#reg").prop('disabled',false);
+            });
+        });
+        $(document).ready(function(){
+            $("#reg").click(function(){
+                $("#pg2").show();
+                $("#pg1").hide();
+                $("#log").prop('disabled',false);
+                $("#reg").prop('disabled',true);
+            });
+        });
+        $(document).ready(function(){
+            $(".username").focus(function(){
+                $(this).css("background-color","#E1F8DC");
+            });
+        });
+        $(document).ready(function(){
+            $(".username").blur(function(){
+                $(this).css("background-color","#CAF1DE");
+            });
+        });
+        $(document).ready(function(){
+            $("#logun").keypress(function(){
+                alert("Please Type Fast,You Just Typed "+$(this).val());
+            });
+        });
+        $(document).ready(function(){
+            $("#regun").keyup(function(){
+                alert("Username Is : "+$(this).val());
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <center>
+            <button id="log">Login</button>
+            <button id="reg">Register</button>
+        <form>
+            <fieldset id="pg1">
+                <legend>Login</legend>
+                <label>username</label>
+                <input type="text" class="username" id="logun">
+                <br>
+                <label>password</label>
+                <input type="password" class="username">
+            </fieldset>
+            <fieldset id="pg2">
+                <legend>Register</legend>
+                <label>username</label>
+                <input type="text" class="username" id="regun">
+                <br>
+                <label>password</label>
+                <input type="password" class="username">
+                <br>
+                <label>confirm password</label>
+                <input type="password" class="username">
+            </fieldset>
+            <input type="submit">
+        </form>
+    </center>
+    </body>
+</html>
